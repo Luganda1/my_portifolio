@@ -1,7 +1,10 @@
 {% include "header.html" %}
         <!-- Page Header-->
 <!--<header class="masthead" style="background-image: url('{‌{ url_for('static', filename='img/contact-bg.jpg')}}')">-->
-        <header class="masthead" style="background-image: url('../static/assets/img/contact-bg.jpg')">
+        <header class="masthead contact">
+<!--style="background-image: linear-gradient(rgba(4, 42, 43, .6), rgba(4, 42, 43, .4)), url('../static/assets/img/sky.jpg'); width: 100vw;-->
+<!--    height: 1724px !important; background-size: cover;    background-position:top; background-repeat:repeat-x; z-index:2;"-->
+           <div class="contact">
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -9,29 +12,32 @@
                             {% if msg_sent: %}
                                 <h2 style="color: green;">Successfully sent your message</h2>
                             {% else: %}
-                                <h1>Contact Me</h1>
-                                <span class="subheading">Have questions? I have answers.</span>
+                                <h2>About Me</h2>
+
                             {% endif %}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Main Content-->
-        <main class="mb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <p>Want to get in touch? Fill out the form below to send me a message and I will get back to you as soon as possible!</p>
-                        <div class="my-5">
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- * * SB Forms Contact Form * *-->
-                            <!-- * * * * * * * * * * * * * * *-->
-                            <!-- This form is pre-integrated with SB Forms.-->
-                            <!-- To make this form functional, sign up at-->
-                            <!-- https://startbootstrap.com/solution/contact-forms-->
-                            <!-- to get an API token!-->
-                            <form id="contactForm" action="{{url_for('contact')}}" method="post" data-sb-form-api-token="API_TOKEN">
+<!--                            <br>-->
+<!--                            <br>-->
+
+<!--                            <h4>My Story</h4>-->
+                            <p>I grew up in a small town in Uganda and all my life i admired to be a tech savvy, i only watched it on TV and always was
+                                fascinated with the way they created such high tech movies and how they came up with ideas and more so movies that had
+                                hacking scenes. Being from third world country i had no access to such knowledge.</p>
+                            <p>When i moved out to Los angeles, california a couples of years back, boy i was determined to learn how to code. I tried joining
+                                full time school and realised i had a lot of bills to pay for and didn't qualify for any grant whatsoever. But i wasn't gonna
+                                see my dream go down the drain so i learnt thru youtube and Udemy that i could teach myself how to code and started with HTML, CSS, JavaScript, Reactjs,
+                                Expressjs, Nodejs, Threejs and Python, Flask. I also learned the different CMS like Shopify, WIX and WordPress
+                            </p>
+
+                            <div class="d-grid gap-2 col-6 mx-auto">
+                                    <a href="https://drive.google.com/file/d/1vemtVgnHo7LS69GP6O3TfmW-cMxmF5as/view" target="_blank" rel="noopener noreferrer">
+                              <button class="btn btn-primary" type="button">CHECK OUT MY RESUME HERE</button>
+                                </a>
+                            </div>
+<!--                        <h4>Contact Me</h4>-->
+                            <br><br>
+                         <p>Want to get in touch? Fill out the form below </p>
+                        <div class="my-3">
+                            <form id="contactForm" action="{{url_for('contact')}}" method="POST" data-sb-form-api-token="API_TOKEN">
                                 <div class="form-floating">
                                     <input type="text" name="name" id="name" class="form-control"  placeholder="Enter your name..." data-sb-validations="required" />
                                     <label for="name">Name</label>
@@ -43,11 +49,11 @@
                                     <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                     <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
                                 </div>
-                                <div class="form-floating">
-                                    <input class="form-control" name="phone" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />
-                                    <label for="phone">Phone Number</label>
-                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                                </div>
+<!--                                <div class="form-floating">-->
+<!--                                    <input class="form-control" name="phone" id="phone" type="tel" placeholder="Enter your phone number..." data-sb-validations="required" />-->
+<!--                                    <label for="phone">Phone Number</label>-->
+<!--                                    <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>-->
+<!--                                </div>-->
                                 <div class="form-floating">
                                     <textarea class="form-control" name="message" id="message" placeholder="Enter your message here..." style="height: 12rem" data-sb-validations="required"></textarea>
                                     <label for="message">Message</label>
@@ -72,12 +78,38 @@
                                 <!-- an error submitting the form-->
                                 <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                                 <!-- Submit Button-->
-                                <button class="btn btn-primary text-uppercase " id="submitButton" type="submit">Send</button>
+                                <button class="btn btn-warning btn-sm btn-block text-uppercase" id="submitButton" type="submit">Send</button>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-        <!-- Footer-->
-       {% include "footer.html" %}
+
+<br>
+                            <br>
+
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+        <div class="col-lg-12 mb-5 mb-lg-0 social-icon">
+            <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/tony.lug.3" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-facebook-f"></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://twitter.com/tonylugan" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-twitter"></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/tonny-luganda-7087b451/" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-linkedin-in"></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/invites/contact/?i=l7owb5chexmd&utm_content=l0wwuy" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://dribbble.com/Luganda" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-dribbble" ></i></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/Luganda1" target="_blank" rel="noopener noreferrer"><i class="fab fa-fw fa-github"></i></a>
+        </div>
+         </div>
+     </div>
+        </footer>
+</div>
+</div>
+</div>
+</div></div>
+
+</header>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!-- Core theme JS-->
+<script src="../static/js/scripts.js"></script>
+</body>
+
+</html>
