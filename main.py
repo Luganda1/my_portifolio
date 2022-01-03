@@ -1,11 +1,8 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 import requests
-
 import os
-
 import smtplib
 from flask_bootstrap import Bootstrap
-
 from flask_ckeditor import CKEditor, CKEditorField
 
 
@@ -62,7 +59,6 @@ def contact():
         return render_template('contact.html', msg_sent=True)
     return render_template('contact.html', msg_sent=False,)
 
-
 if __name__ == "__main__":
-    app.run(debug=True)
-    # app.run(host='0.0.0.0', port=5000)
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
